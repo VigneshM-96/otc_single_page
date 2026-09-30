@@ -75,25 +75,21 @@ export default function Navbar() {
             />
           </a>
 
-          {/* Desktop Navigation */}
           <div className="desktop-nav">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="nav-link"
-              >
-                {item.label}
-              </a>
-            ))}
+  {navItems.map((item) => (
+    <a
+      key={item.href}
+      href={item.href}
+      className="nav-link"
+    >
+      {item.label}
+    </a>
+  ))}
+</div>
 
-            <a
-              href="#contact"
-              className="nav-cta"
-            >
-              Contact Us
-            </a>
-          </div>
+<a href="#contact" className="nav-cta">
+  Contact Us
+</a>
 
           {/* Mobile Menu Button */}
           <button
