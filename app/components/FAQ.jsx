@@ -4,34 +4,39 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "What is USDT OTC trading?",
+    question: "Is there a crypto OTC desk in India?",
     answer:
-      "USDT OTC trading allows buyers and sellers to complete USDT transactions directly through an OTC desk, providing a more flexible way to handle larger or specific trading requirements.",
+      "Yes. Crypto OTC desks operate in India, including services that facilitate larger-volume USDT transactions. Providers conducting activities covered by India’s VDA framework may have FIU-IND registration and AML compliance obligations.",
   },
+
   {
-    question: "How does Unitic USDT OTC work?",
+    question: "Is OTC trading legal in India?",
     answer:
-      "Unitic connects you with its USDT OTC trading service, where you can discuss your transaction requirements, confirm the trade details and proceed with the settlement process.",
+      "OTC trading of virtual digital assets is not simply prohibited as a category. However, applicable AML, tax, KYC, reporting and other legal requirements can apply depending on the activities and parties involved. VDA service providers covered by PMLA requirements must comply with FIU-IND obligations.",
   },
+
   {
-    question: "Why use an OTC desk instead of a regular exchange?",
+    question: "Can I legally buy USDT in India?",
     answer:
-      "OTC trading can provide a more direct transaction experience and may be suitable for users looking for flexible transaction arrangements, particularly for larger USDT trades.",
+      "USDT is treated within India’s virtual digital asset framework, and buying or selling VDA can have applicable tax and compliance consequences. Users should use compliant channels and maintain appropriate transaction records.",
   },
+
   {
-    question: "Is USDT OTC trading secure?",
+    question: "Where Can I Sell USDT at a Competitive Price in India?",
     answer:
-      "Unitic is designed to provide a structured and reliable OTC trading experience. Users should always verify transaction details and follow the security procedures provided by the trading desk.",
+      "Sell USDT through Unitic's OTC Desk with competitive INR pricing, structured execution, and dedicated support for larger-volume transactions.",
   },
+
   {
-    question: "Can I access the trading platform from mobile and desktop?",
+    question: "Can I Buy and Sell USDT in India?",
     answer:
-      "Yes. The trading experience can be accessed across supported mobile and desktop platforms, allowing users to manage their trading requirements from different devices.",
+      "Yes. You can buy and sell USDT in India through crypto platforms and OTC desks that support USDT transactions. For larger trades, an OTC desk can provide negotiated quotes and structured settlement. Users should verify the provider’s applicable compliance requirements and understand the tax obligations associated with VDA transactions.",
   },
+
   {
-    question: "How can I connect with Unitic for USDT OTC trading?",
+    question: "How can I connect/use USDT with Unitic?",
     answer:
-      "You can connect with Unitic through the USDT OTC desk to discuss your requirements and start the trading process.",
+      "For larger USDT transactions, you can contact Unitic's OTC desk and request a quote. Unitic currently describes its OTC service as supporting large-volume trades, INR-to-crypto conversion, dedicated USDT trading, and personalized pricing.",
   },
 ];
 
@@ -52,32 +57,39 @@ export default function FAQ() {
     >
       <div className="faq-container">
 
+        {/* HEADING */}
         <div className="faq-heading">
-          <span className="section-eyebrow">
-            FREQUENTLY ASKED QUESTIONS
-          </span>
 
-          <h2 id="faq-title">
-            Everything You Need
-            <br />
-            to Know About <span>USDT OTC</span>
+        
+
+          <h2 id="main-title">
+            Frequently Asked <span>Questions</span>
           </h2>
 
           <p>
             Find answers to common questions about USDT OTC trading,
-            Unitic and the trading experience.
+            buying and selling USDT in India, and connecting with
+            Unitic's OTC desk.
           </p>
+
         </div>
 
+
+        {/* FAQ LIST */}
         <div className="faq-list">
+
           {faqs.map((faq, index) => {
+
             const isOpen = openIndex === index;
 
             return (
               <div
-                className={`faq-item ${isOpen ? "faq-item-open" : ""}`}
+                className={`faq-item ${
+                  isOpen ? "faq-item-open" : ""
+                }`}
                 key={faq.question}
               >
+
                 <button
                   type="button"
                   className="faq-question"
@@ -85,33 +97,48 @@ export default function FAQ() {
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                 >
+
                   <span className="faq-question-text">
+
                     <span className="faq-number">
                       {String(index + 1).padStart(2, "0")}
                     </span>
 
                     {faq.question}
+
                   </span>
+
 
                   <span
                     className="faq-icon"
                     aria-hidden="true"
                   >
-                    +
+                    {isOpen ? "−" : "+"}
                   </span>
+
                 </button>
+
 
                 <div
                   id={`faq-answer-${index}`}
                   className="faq-answer-wrapper"
                 >
+
                   <div className="faq-answer">
-                    <p>{faq.answer}</p>
+
+                    <p>
+                      {faq.answer}
+                    </p>
+
                   </div>
+
                 </div>
+
               </div>
             );
+
           })}
+
         </div>
 
       </div>

@@ -47,11 +47,8 @@ export default function PlatformShowcase() {
       <div className="platforms-container">
 
         <div className="platforms-content">
-          <span className="section-eyebrow">
-            RELIABLE PLATFORMS FOR TRADING
-          </span>
 
-          <h2 id="platforms-title">
+          <h2 id="main-title">
             Trade with
             <br />
             <span>Confidence.</span>

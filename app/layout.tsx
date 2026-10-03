@@ -9,9 +9,9 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Unitic | USDT OTC Trading",
+  title: "USDT OTC India | Buy & Sell USDT via OTC Desk – Unitic",
   description:
-    "Trade USDT through a simple, reliable and efficient OTC trading platform.",
+    "Trade USDT OTC in India with Unitic. Competitive INR rates, verified counterparties, fast settlements and dedicated OTC desk support for bulk trades.",
 };
 
 export default function RootLayout({

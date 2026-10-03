@@ -11,6 +11,7 @@ export default function StatsCounter({
   const [hasStarted, setHasStarted] = useState(false);
   const ref = useRef(null);
 
+  // Start counting when the element enters the viewport
   useEffect(() => {
     const element = ref.current;
 
@@ -18,8 +19,9 @@ export default function StatsCounter({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasStarted) {
+        if (entry.isIntersecting) {
           setHasStarted(true);
+          observer.disconnect();
         }
       },
       {
@@ -30,8 +32,9 @@ export default function StatsCounter({
     observer.observe(element);
 
     return () => observer.disconnect();
-  }, [hasStarted]);
+  }, []);
 
+  // Counter animation
   useEffect(() => {
     if (!hasStarted) return;
 
@@ -39,7 +42,7 @@ export default function StatsCounter({
     let animationFrame;
 
     const animate = (timestamp) => {
-      if (!startTime) {
+      if (startTime === null) {
         startTime = timestamp;
       }
 
@@ -48,8 +51,9 @@ export default function StatsCounter({
         1
       );
 
-      // Smooth ease-out animation
-      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      // Smooth ease-out
+      const easedProgress =
+        1 - Math.pow(1 - progress, 3);
 
       setCount(Math.floor(value * easedProgress));
 
@@ -62,7 +66,11 @@ export default function StatsCounter({
 
     animationFrame = requestAnimationFrame(animate);
 
-    return () => cancelAnimationFrame(animationFrame);
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
   }, [hasStarted, value, duration]);
 
   return (
