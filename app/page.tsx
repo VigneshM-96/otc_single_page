@@ -43,6 +43,9 @@ export default function Main() {
             <div className="hero-visual">
 
               <div className="hero-image-wrapper">
+
+                <div className="why-choose-image-glow" />
+
                 <img
                   src="/landing_img.png"
                   alt="USDT OTC trading interface"
@@ -118,8 +121,11 @@ export default function Main() {
 
               </div>
 
+             
+
               {/* RIGHT — IMAGE */}
               <div className="usdt-otc-visual">
+                 <div className="why-choose-image-glow" />
                 <img
                   src="/what_is_otc_img.jpg"
                   alt="USDT OTC trading interface"
@@ -378,11 +384,15 @@ export default function Main() {
             {/* LEFT — IMAGE */}
             <div className="trade-unitic-visual">
 
+            <div className="why-choose-image-glow" />
+
               <img
                 src="/trade_unitic.png"
                 alt="Trading USDT through Unitic"
                 className="trade-unitic-image"
               />
+
+
 
             </div>
 

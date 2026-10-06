@@ -145,7 +145,7 @@ export default function Footer() {
             <h2>Contact us</h2>
 
             <p>
-              
+              supports@uniticexchange.com
             </p>
 
           </div>
