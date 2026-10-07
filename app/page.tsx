@@ -24,10 +24,10 @@ export default function Main() {
             <div className="hero-content">
 
               <h1 id="hero-title">
-                USDT OTC Desk in{" "}
+                USDT OTC Desk IN{" "}
                 <span className="hero-highlight">India</span>
                 <br />
-                for Large-Volume Trades
+                FOR LARGE VOLUME TRADES
               </h1>
 
               <p className="hero-description">
@@ -100,7 +100,7 @@ export default function Main() {
 
 
                 <h2 id="main-title">
-                  Buy and Sell USDT Through a Structured OTC Desk
+                  Buy & Sell USDT Through a Structured OTC Desk
                 </h2>
 
                 <p>
@@ -127,7 +127,7 @@ export default function Main() {
               <div className="usdt-otc-visual">
                  <div className="why-choose-image-glow" />
                 <img
-                  src="/what_is_otc_img.jpg"
+                  src="/what_is_otc_img.png"
                   alt="USDT OTC trading interface"
                   className="usdt-otc-image"
                 />
@@ -833,9 +833,9 @@ export default function Main() {
 
       <div className="simple-disclaimer">
 
-        <h3>
+        <h5 style={{paddingBottom: "10px"}}>
           Disclaimer
-        </h3>
+        </h5>
 
         <p>
           Crypto assets and NFTs are highly volatile and speculative in nature, with prices subject to sudden and significant fluctuations due to market demand, regulatory developments, technological changes, liquidity conditions, and external global factors; investments in these digital assets carry a high level of risk, including the potential loss of your entire invested capital, and may not be suitable for all investors. Past performance is not indicative of future results, and there is no guarantee of returns or capital protection. Users are strongly advised to conduct thorough research, assess their financial situation, risk tolerance, and investment objectives before participating, and to trade cautiously by investing only funds they can afford to lose without impacting their financial stability. Unitic Exchange operates exclusively through its official domain, www.uniticexchange.com and users must always verify the website URL carefully before logging in or making any transactions, as the platform is not responsible for losses arising from accessing fraudulent or lookalike websites. Furthermore, Unitic Exchange will never contact users via phone calls, messages, or emails to request sensitive information such as passwords, OTPs, private keys, or account details, and users must not share their confidential information with anyone under any circumstances to avoid scams and unauthorized access.

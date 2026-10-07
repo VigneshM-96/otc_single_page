@@ -100,9 +100,9 @@ export default function FAQ() {
 
                   <span className="faq-question-text">
 
-                    <span className="faq-number">
+                    {/* <span className="faq-number">
                       {String(index + 1).padStart(2, "0")}
-                    </span>
+                    </span> */}
 
                     {faq.question}
 
